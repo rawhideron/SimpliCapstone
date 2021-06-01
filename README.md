@@ -8,7 +8,7 @@ I also setup Java (installJava.yml) as it is a Jenkins dependency. I setup maven
 
 DockerSetup/playbook.yml was an ansible script to setup docker on  ec2-54-83-228-224.compute-1.amazonaws.com
 
-The pipeline I created is http://ec2-3-93-32-82.compute-1.amazonaws.com:8080/job/docker_git_trigger/23/console
+The pipeline I created is http://ec2-3-93-32-82.compute-1.amazonaws.com:8080/job/docker_git_trigger/
 It consists of 7 steps:
 - SCM checkout (from https://github.com/rawhideron/nginx which includes a webhook).
 - Build docker image 
