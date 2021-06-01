@@ -1,0 +1,28 @@
+---
+- name: ec2 launcher
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: launching Jenkins ec2 instance 
+    ec2:
+      instance_type: t2.micro
+      key_name: jenkins
+      image: ami-09e67e426f25ce0d7
+      region: us-east-1
+      group: default
+      count: 1
+      vpc_subnet_id: subnet-de6a0493
+      wait: yes
+      assign_public_ip: yes
+
+  - name: Jenkins ec2 worker instance
+    ec2:
+      instance_type: t2.micro
+      key_name: jenkins
+      image: ami-09e67e426f25ce0d7
+      region: us-east-1
+      group: default
+      count: 1
+      vpc_subnet_id: subnet-de6a0493
+      wait: yes
+      assign_public_ip: yes

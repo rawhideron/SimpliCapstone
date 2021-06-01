@@ -1,0 +1,5 @@
+---
+create_containers: 4
+default_container_name: riot
+default_container_image: centos:7
+default_container_command:
